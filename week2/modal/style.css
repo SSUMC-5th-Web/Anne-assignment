@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+#app{
+    width: 100%;
+    position: relative;
+}
+
+
+#app h1{
+    margin-bottom: 10px;
+}
+#app p{
+    margin-bottom: 10px;
+}
+
+
+#modal{
+    position: fixed;
+    left: 0;
+    top:0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal #modaltext{
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+#modal #modaltext h2{
+    margin-bottom: 15px;
+}
+#modal #modaltext p{
+    margin-bottom: 10px;
+}
+
+.close-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.close-container button{
+    padding: 0 5px;
+}
