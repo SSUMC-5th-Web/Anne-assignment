@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div id="container">    
+        <div id="signup-container">
+            <div class="signup">
+                <h1>회원가입</h1>
+                <hr>
+                <form id="signupForm">
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" class="signupInput">
+                    <p class="alert" id="userNameAlert"></p>
+
+                    <label for="nickname">닉네임</label>
+                    <input type="text" id="nickname" class="signupInput">
+                    <p class="alert" id="nicknameAlert"></p>
+
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" class="signupInput">
+                    <p class="alert" id="emailAlert"></p>
+                    
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" class="signupInput">
+                    <p class="alert" id="passwordAlert"></p>
+
+                    <label for="passwordCheck">비밀번호 확인</label>
+                    <input type="password" id="passwordCheck" class="signupInput">
+                    <p class="alert" id="passwordCheckAlert"></p>
+                    
+                    <button type="button" id="signUpBtn">가입하기</button>
+                </form>
+
+        
+            </div>
+        </div>
+
+
+
+        <div class="modal-container" style="display: none;">
+            <div class="modal">
+                <h2>가입 성공!</h2>
+                <p>umc 챌린저 가입을 축하합니다!!</p>
+                <div class="close-container">
+                    <button id="close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
