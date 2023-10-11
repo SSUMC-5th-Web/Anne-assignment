@@ -1,20 +1,9 @@
-import React, { useState } from 'react';
-import Description from './Description';
-
+import React from 'react'
 
 const Movie = (props) => {
-  const [description, setDescription] = useState(false);
-
-  const showDescription = function(){
-    setDescription(true);
-  }
-  const closeDescription = function(){
-    setDescription(false);
-  }
-  
   return (
     <>
-        <div className="movie-card" onMouseOver={showDescription} onMouseOut={closeDescription}>
+        <div className="movie-card">
             <div className="movie-image">
                 <img src={props.poster_path} alt="poster"/>
             </div>
@@ -22,9 +11,6 @@ const Movie = (props) => {
                 <h3>{props.title}</h3>
                 <span>{props.vote_average}</span>
             </div>
-
-            {description && <Description title={props.title} overview={props.overview}/>}
-
         </div>
     </>
   )
