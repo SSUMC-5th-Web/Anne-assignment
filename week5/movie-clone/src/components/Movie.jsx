@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
-import Description from './Description';
+import { useNavigate } from 'react-router-dom';
+// import Description from './Description';
 
 
 const Movie = (props) => {
-  const [description, setDescription] = useState(false);
+  // const [description, setDescription] = useState(false);
 
-  const showDescription = function(){
-    setDescription(true);
-  }
-  const closeDescription = function(){
-    setDescription(false);
+  // const showDescription = function(){
+    // setDescription(true);
+  // }
+  // const closeDescription = function(){
+    // setDescription(false);
+  // }
+
+  
+  const navigate = useNavigate();
+
+  const onClickMovieItem = ()=>{
+    navigate(`/movie/${props.title}`, {
+      state:props
+    })
   }
   
   return (
     <>
-        <div className="movie-card" onMouseOver={showDescription} onMouseOut={closeDescription}>
+        <div className="movie-card" onClick={onClickMovieItem}>
             <div className="movie-image">
                 <img src={props.poster_path} alt="poster"/>
             </div>
@@ -23,7 +33,7 @@ const Movie = (props) => {
                 <span>{props.vote_average}</span>
             </div>
 
-            {description && <Description title={props.title} overview={props.overview}/>}
+            {/* {description && <Description title={props.title} overview={props.overview}/>} */}
 
         </div>
     </>

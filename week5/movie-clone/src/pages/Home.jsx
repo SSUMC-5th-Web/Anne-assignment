@@ -1,8 +1,11 @@
 import React from 'react'
+import AdPage from '../components/AdPage'
 
 const Home = () => {
   return (
-    <div className='page-container' style={{fontSize:'32px'}}>Home</div>
+    <div className='page-container' style={{fontSize:'32px'}}>
+      <AdPage/>
+    </div>
   )
 }
 
