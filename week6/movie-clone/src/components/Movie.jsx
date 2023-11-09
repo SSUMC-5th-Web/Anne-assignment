@@ -4,8 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Movie = (props) => {
-
-  
   const navigate = useNavigate();
 
   const onClickImg = ()=>{
