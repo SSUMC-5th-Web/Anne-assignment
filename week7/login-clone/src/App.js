@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 // import Movie from "./components/Movie";
@@ -12,10 +13,15 @@ import Login from "./pages/Login";
 
 
 function App() {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  // const changeLogin = function(){
+  //   setLoggedIn(!isLoggedIn);
+  // }
+
   return (
     <div className="root-wrap">
       <BrowserRouter>
-        <Header/>
+        <Header isLoggedIn={isLoggedIn}/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/movie" element={<Movies/>} />
@@ -23,7 +29,7 @@ function App() {
           <Route path="/tv" element={<TV/>} />
           <Route path="/person" element={<Celebirity/>} />
           <Route path="/*" element={<NotFound/>} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/login" element={<Login isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>} />
 
         </Routes>
       </BrowserRouter>

@@ -1,15 +1,15 @@
 import React from 'react'
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginControl = (props) => {
+const LoginControl = ({isLoggedIn}) => {
 
     const navigate = useNavigate();
+
   return (
     <div className='loginControl' >
-        <button className='loginBtn' onClick={()=>{navigate('/login')}}>{props.isLoggedIn ? '로그인' : '로그아웃'}
+        <button className='loginBtn' onClick={()=>{navigate('/login')}}>{isLoggedIn ? '로그아웃' : '로그인'}
         </button>
-        <p className='loginMessage'>{props.isLoggedIn ? '로그인 하세요' : '환영합니다!'}</p>
+        <p className='loginMessage'>{isLoggedIn ? '환영합니다!' : '로그인하세요!'}</p>
     </div>
   )
 }

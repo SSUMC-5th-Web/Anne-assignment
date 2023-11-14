@@ -70,6 +70,7 @@
   width: 70px;
   height: 30px;
   border: 0;
+  cursor: pointer;
 }
 .loginBtn:hover{
   background-color: #6667aa;
@@ -79,14 +80,14 @@
 
 /* loginPage */
 .login-page{
-  /* padding: 40px; */
   display: flex;
   justify-content: center;
-  /* flex-wrap: wrap; */
 }
 .login-container{
   width: 400px;
   padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .login-container h2{
   font-size: 32px;
@@ -102,6 +103,7 @@
   font-size: 18px;
   line-height: 1.5;
   font-weight: 600;
+  width: 100%;
 }
 .login-container input{
   width: 100%;
@@ -111,6 +113,8 @@
   margin-bottom: 10px;
 }
 
+
+
 #loginBtn{
   height: 40px;
   border: none;
@@ -118,9 +122,17 @@
   color: white;
 }
 
+#loginBtn.loginActive{
+  background-color: #404bc2;
+  cursor: pointer;
+}
+
+
 .login-warning{
   font-size: 14px;
+  margin-bottom: 20px;
 }
+
 
 
 

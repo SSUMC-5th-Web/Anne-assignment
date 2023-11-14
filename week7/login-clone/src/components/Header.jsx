@@ -1,14 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import LoginControl from './LoginControl'
 
 
-const Header = () => {
-    const [isLoggedIn, setLoggedIn] = useState(1);
-    const changeLogin = function(){
-        setLoggedIn(!isLoggedIn);
-    }
+const Header = ({isLoggedIn}) => {
+    // const [isLoggedIn, setLoggedIn] = useState(1);
+    // const changeLogin = function(){
+    //     setLoggedIn(!isLoggedIn);
+    // }
 
   return (
     <div className="header-container">
