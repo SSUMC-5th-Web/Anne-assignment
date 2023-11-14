@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-// import Movie from "./components/Movie";
-// import {movies} from "./movieDummy.js";
 import Movies from "./pages/Movies";
 import TV from "./pages/TV";
 import Celebirity from "./pages/Celebirity";
@@ -14,9 +12,6 @@ import Login from "./pages/Login";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-  // const changeLogin = function(){
-  //   setLoggedIn(!isLoggedIn);
-  // }
 
   return (
     <div className="root-wrap">
