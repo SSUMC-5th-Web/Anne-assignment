@@ -1,0 +1,267 @@
+@import 'reset.css';
+
+
+
+.root-wrap{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width:100%;
+}
+
+/* header  */
+.header-container{
+  background-color: rgba(34, 37, 75,1);
+}
+
+.header-wrap{
+  height: 64px;
+  max-width: 1200px;
+  margin:0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.header-left-wrap{
+  display: flex;
+}
+
+.header-left-wrap ul{
+  display: flex;
+  margin-left: 16px;
+}
+
+.header-left-wrap li{
+  margin-right: 14px;
+  padding: 8px;
+}
+
+
+
+.header-nav-item{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.page-container{
+  max-width: 2000px;
+  margin:0 auto;
+  padding: 32px 0;
+}
+
+
+
+
+/* LoginControl */
+.loginControl{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.loginBtn{
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 70px;
+  height: 30px;
+  border: 0;
+  cursor: pointer;
+}
+.loginBtn:hover{
+  background-color: #6667aa;
+  color: white;
+}
+
+
+/* loginPage */
+.login-page{
+  display: flex;
+  justify-content: center;
+}
+.login-container{
+  width: 400px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.login-container h2{
+  font-size: 32px;
+  margin-bottom: 20px;
+  width: 100%;
+  line-height: 1.2;
+}
+.login-container form{
+  width: 100%;
+}
+
+.login-container label{
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+  width: 100%;
+}
+.login-container input{
+  width: 100%;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid rgb(170, 170, 170);
+  margin-bottom: 10px;
+}
+
+.login-container p{
+  color: red;
+  font-weight: 400;
+}
+
+
+
+#loginBtn{
+  height: 40px;
+  border: none;
+  background-color: #9f9f9f;
+  color: white;
+}
+
+#loginBtn.loginActive{
+  background-color: #404bc2;
+  cursor: pointer;
+}
+
+
+.login-warning{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* *{
+  margin:0;
+  padding: 0;
+  color: #fff;
+}  */
+
+.movies-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 100px;
+  color: white;
+}
+
+.movie-card{
+  width: 200px;
+  height: 375px;
+  background-color: #373B69;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+}
+
+
+.movie-card .movie-image img{
+  width: 100%;
+}
+
+.movie-card .movie-title{
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.movie-card .movie-title h3{
+  width: 80%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+/* MovieDetail */
+
+.movie-detail{
+  display: flex;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.detail-img{
+  width: 300px;
+  height: 450px;
+  margin-right: 40px;
+  border-radius: 20px;
+  border: 4px solid #494d7e;
+
+}
+
+.detail-title{
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.detail-overview{
+  line-height: 1.5;
+  color: white;
+}
+
+
+
+/* NotFound */
+.notFound-title{
+  margin-top: 64px;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.notFound-subtitle{
+  font-size: 32px;
+  line-height: 1,6;
+}
+
+.mainBtn{
+  font-size: 32px;
+  line-height: 1.6;
+  color: #404bc2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+
+
+/* 
+.movie-description{
+  position: absolute;
+  top:0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.movie-description h3{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.movie-description p{
+  font-size: 12px;
+  line-height: 1.2;
+} 
+ */
