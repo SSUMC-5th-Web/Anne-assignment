@@ -59,7 +59,7 @@ const Login = ({isLoggedIn, setLoggedIn}) => {
                     <p className='login-warning'>{emailWarning}</p>
                 </label>
            
-
+           
                 <label>비밀번호
                     <input type="password" id="password" placeholder='영문, 숫자, 특수문자 포함 8자 이상' onChange={(e)=> checkPassword(e)}/>
                     <p className='login-warning'>{passwordWarning}</p>
