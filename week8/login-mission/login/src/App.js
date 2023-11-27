@@ -11,27 +11,49 @@ function App() {
 
   const [id, setId] = useState('');
   const [pw, setPassword] = useState('');
+  const [userId, setUserId] = useState('');
 
   const handleLogin = async() =>{
     if(!id || !pw){
       alert("아이디나 비밀번호가 입력되지 않았습니다. ");
       return;
     }
-    try{
-      const response = await axios({
-        url: url,
-        method: 'post',
-        data: {
-          id: id,
-          pw: pw,
-        },
-      });
 
-      console.log('success', response.data);
+    axios.post(url, {
+      id:id,
+      pw:pw
+    })
+    .then((response) =>{
+      console.log(response);
+      const accessToken = response.data.result.AccessToken;
+      const tempId = response.data.result.userId;
+      setUserId(tempId);
 
-    }catch(err){
+      if(accessToken){
+        localStorage.setItem('token', accessToken);
+      }
+      localStorage.setItem('id', tempId);
+    })
+    .catch(err =>{
       console.log(err);
-    }
+    })
+
+
+    // try{
+    //   const response = await axios({
+    //     url: url,
+    //     method: 'post',
+    //     data: {
+    //       id: id,
+    //       pw: pw,
+    //     },
+    //   });
+
+    //   console.log('success', response.data);
+
+    // }catch(err){
+    //   console.log(err);
+    // }
   }
 
   return (
@@ -52,6 +74,10 @@ function App() {
            
                 <input type="button" value="확인" id="loginBtn" onClick={handleLogin}/>
             </form>
+
+            <div className="result">
+              {userId!=='' && `${userId}님 반갑습니다.`}
+            </div>
         </div>
     </div>
     </div>
